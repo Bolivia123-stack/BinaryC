@@ -1,0 +1,13 @@
+opcodes = {
+"ADD": "0001",
+"SUB": "0010",
+"MOV": "0011",
+}
+asm_code = input("Введите ассемблерный код: ")
+instructions = asm_code.split("\n")
+binary_code = ""
+for instruction in instructions:
+opcode = opcodes[instruction.split(" ")[0]]
+binary_code += opcode
+print("Бинарный код: " + binary_code)
+print(binary_code)
